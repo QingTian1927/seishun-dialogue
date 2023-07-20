@@ -1,0 +1,41 @@
+.greetingContainer, .signaContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.greetingContainer { height: 70vh; }
+.signaContainer { height: 30vh; }
+
+.greeting, .signature {
+    position: absolute;
+    color: var(--background);
+    background-color: var(--foreground);
+}
+
+.greeting {
+    width: 80%;
+    max-height: 90%;
+    padding: 0.6em;
+    border-radius: 0.8em;
+    text-align: justify;
+}
+
+.signature {
+    width: 6em;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+@media screen and (orientation:landscape) {
+    .greeting { font-size: 4.2vh; }
+    .signature { font-size: 8vh; }
+}
+
+@media screen and (orientation:portrait) {
+    .greeting { font-size: 3.5vh; }
+    .signature { font-size: 7vh; }
+}

@@ -1,0 +1,87 @@
+.titleContainer, .infoContainer, .buttonsContainer
+{ position: relative; width: 100vw; }
+.titleContainer { height: 50vh; }
+.infoContainer { height: 10vh; }
+.buttonsContainer { height: 20vh; }
+.dialogContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.invertColors {
+    color: var(--background);
+    background-color: var(--foreground);
+}
+
+.titleCard {
+    position: absolute;
+    border-radius: 0.6em;
+    padding: 0.3em;
+    text-align: left;
+}
+
+.loginBtn, .signupBtn, .infoBtn {
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    border-style: none;
+}
+.loginBtn:hover, .signupBtn:hover, .infoBtn:hover
+{ background-color: var(--highlight); }
+
+.infoBtn {
+    top: 1em;
+    right: 1em;
+    border-radius: 50%;
+    width: 1.25em;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.loginBtn, .signupBtn {
+    right: 10%;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    text-align: left;
+}
+.loginBtn { bottom: 0.3em; }
+.signupBtn { top: 0.3em; }
+
+.loginDialog {
+    border-radius: 0.6em;
+    font-size: 3vh;
+
+    & input[type=text] {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1em;
+        margin: 1em;
+        font-size: 2rem;
+    }
+
+    & button {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .titleCard { left: 10%; top: 10%; font-size: 10vh; }
+    .loginBtn, .signupBtn { font-size: 4.5vh; }
+    .loginBtn { width: 15em; }
+    .signupBtn { width: 13em; }
+}
+
+@media screen and (orientation:portrait) {
+    .titleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleCard { font-size: 5.5vh; }
+    .loginBtn, .signupBtn { font-size: 3vh; }
+    .loginBtn { width: 10em; }
+    .signupBtn { width: 8em; }
+}
