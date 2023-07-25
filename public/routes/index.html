@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,40 +14,38 @@
 
 <body>
     <div class="infoContainer">
-        <button type="button" id="infoBtn" title="Visit the about us page"
-        class="infoBtn invertColors serif">i</button>
+        <button type="button" id="infoBtn" title="Visit the about us page" class="infoBtn blackWhite serif">i</button>
     </div>
 
     <div class="titleContainer">
-        <div class="titleCard invertColors serif" id="titleCard">
+        <div class="titleCard blackWhite serif" id="titleCard">
             <h1>The entry to <br> the "Universe"</h1>
         </div>
     </div>
 
     <div class="buttonsContainer">
-        <button type="button" id="loginBtn" onclick=""
-        class="loginBtn invertColors serif">Login</button>
+        <button type="button" id="loginBtn" title="Log into your Seishun dashboard"
+            class="loginBtn blackWhite serif">Log In
+        </button>
     </div>
 
     <div class="buttonsContainer">
-        <button type="button" id="signupBtn" onclick=""
-        class="signupBtn invertColors serif">Sign Up</button>
+        <button type="button" id="signupBtn" title="Sign up for a Seishun record"
+            class="signupBtn blackWhite serif">Sign Up
+        </button>
     </div>
 
-    < class="dialogContainer">
-        <dialog class="loginDialog sans-serif" id="loginDialog">
-            <form action="/dashboard" method="post">
-                <button id="cancelBtn" class="sans-serif" type="button">X</button><br>
-                <label for="loginCode" title="Your previously assigned login code">
-                    <strong>Login code:</strong>
-                </label><br>
-                <input type="text" id="loginCode" name="loginCode" required
-                minlength="8" maxlength="8" pattern="[a-zA-Z0-9]{8,8}"
-                class="monospace"><br>
-
-                <button id="submitBtn" class="sans-serif" value="default">Submit</button>
-            </form>
-        </dialog>
-    </div>
+    <dialog class="modal blackWhite sans-serif" id="entryDialog">
+        <form action="" method="POST">
+            <h2>default text</h2><br>
+            <label for="" title="">
+                <p class="label">default text:</p>
+                <input type="text" id="" name="" required minlength="" maxlength="" pattern="" class=""><br><br>
+            </label>
+            <button id="cancelBtn" class="dialogBtn whiteBlack sans-serif" type="button">Cancel</button>
+            <button id="submitBtn" class="dialogBtn whiteBlack sans-serif" type="submit">Submit</button>
+        </form>
+    </dialog>
 </body>
+
 </html>

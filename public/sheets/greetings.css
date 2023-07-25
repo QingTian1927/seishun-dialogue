@@ -6,8 +6,8 @@
     width: 100vw;
 }
 
-.greetingContainer { height: 70vh; }
-.signaContainer { height: 30vh; }
+.greetingContainer {height: 70vh;}
+.signaContainer {height: 30vh;}
 
 .greeting, .signature {
     position: absolute;
@@ -31,11 +31,11 @@
 }
 
 @media screen and (orientation:landscape) {
-    .greeting { font-size: 4.2vh; }
-    .signature { font-size: 8vh; }
+    .greeting {font-size: 4.2vh;}
+    .signature {font-size: 8vh;}
 }
 
 @media screen and (orientation:portrait) {
-    .greeting { font-size: 3.5vh; }
-    .signature { font-size: 7vh; }
+    .greeting {font-size: 3.5vh;}
+    .signature {font-size: 7vh;}
 }

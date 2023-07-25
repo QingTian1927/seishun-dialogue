@@ -4,11 +4,11 @@ export function openNewTab(link) {
 
 export function retrieveText(textFile) {
     fetch(textFile)
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error(`HTTP error: ${res.status}`);
         }
-        return response.text();
+        return res.text();
     })
     .then((text) => {return text})
     .catch((err) => console.error(`Fetch issue for item (${textFile}): ${err.message}`));

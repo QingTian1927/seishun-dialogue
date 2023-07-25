@@ -1,20 +1,8 @@
 .titleContainer, .infoContainer, .buttonsContainer
-{ position: relative; width: 100vw; }
-.titleContainer { height: 50vh; }
-.infoContainer { height: 10vh; }
-.buttonsContainer { height: 20vh; }
-.dialogContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-.invertColors {
-    color: var(--background);
-    background-color: var(--foreground);
-}
+{position: relative; width: 100vw;}
+.titleContainer {height: 50vh;}
+.infoContainer {height: 10vh;}
+.buttonsContainer {height: 20vh;}
 
 .titleCard {
     position: absolute;
@@ -30,7 +18,7 @@
     border-style: none;
 }
 .loginBtn:hover, .signupBtn:hover, .infoBtn:hover
-{ background-color: var(--highlight); }
+{background-color: var(--highlight);}
 
 .infoBtn {
     top: 1em;
@@ -47,31 +35,74 @@
     padding: 0.2em;
     text-align: left;
 }
-.loginBtn { bottom: 0.3em; }
-.signupBtn { top: 0.3em; }
+.loginBtn {bottom: 0.3em;}
+.signupBtn {top: 0.3em;}
 
-.loginDialog {
+.dialogBtn {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-style: none;
     border-radius: 0.6em;
-    font-size: 3vh;
+    text-align: center;
+}
+.dialogBtn:hover {
+    color: var(--background);
+    background-color: var(--highlight);
+}
 
-    & input[type=text] {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 1em;
-        margin: 1em;
-        font-size: 2rem;
-    }
+.modal {
+    text-align: center;
+    border-radius: 0.6em;
+    border-width: 0.2em;
+    max-width: 80vw;
+}
+.modal::backdrop {background: rgba(17, 17, 17, 0.7);}
 
-    & button {
-        font-size: 2rem;
-    }
+.label {text-align: left;}
+
+.codeInput, .nameInput {
+    box-sizing: border-box;
+    max-width: 75vw;
+    text-align: left;
+}
+.codeInput, .nameInput:focus {outline: none;}
+
+.codeInput {
+    width: 12ch;
+    padding: 0;
+    margin: 0.3em auto;
+    border: none;
+    color: var(--background);
+    background:
+        repeating-linear-gradient(90deg,
+            var(--background) 0, var(--background) 1ch,
+            transparent 0, transparent 1.5ch
+        ) 0 100%/ 12ch 0.1em no-repeat;
+    letter-spacing: 0.5ch;
+}
+
+.nameInput {
+    padding: 0.3em;
+    margin: 0.3em auto;
+    border-radius: 0.4em;
+    border: 0.2em solid var(--background);
+    font-size: 3.5vh;
+
+    color: var(--background);
+    background-color: var(--foreground);
 }
 
 @media screen and (orientation:landscape) {
-    .titleCard { left: 10%; top: 10%; font-size: 10vh; }
-    .loginBtn, .signupBtn { font-size: 4.5vh; }
-    .loginBtn { width: 15em; }
-    .signupBtn { width: 13em; }
+    .titleCard {left: 10%; top: 10%; font-size: 10vh;}
+    .loginBtn, .signupBtn {font-size: 4.5vh;}
+    .loginBtn {width: 15em;}
+    .signupBtn {width: 13em;}
+    .codeInput {font-size: 5.5vh;}
+    .nameInput {font-size: 3.75vh;}
+    .dialogBtn {font-size: 3vh;}
+    .modal {font-size: 4.25vh;}
+    .label {font-size: 3vh;}
 }
 
 @media screen and (orientation:portrait) {
@@ -80,8 +111,13 @@
         justify-content: center;
         align-items: center;
     }
-    .titleCard { font-size: 5.5vh; }
-    .loginBtn, .signupBtn { font-size: 3vh; }
-    .loginBtn { width: 10em; }
-    .signupBtn { width: 8em; }
+    .titleCard {font-size: 5.5vh;}
+    .loginBtn, .signupBtn {font-size: 3vh;}
+    .loginBtn {width: 10em;}
+    .signupBtn {width: 8em;}
+    .codeInput {font-size: 4.5vh;}
+    .nameInput {font-size: 3vh;}
+    .dialogBtn {font-size: 2.25vh;}
+    .modal {font-size: 3.5vh;}
+    .label {font-size: 2.25vh;}
 }

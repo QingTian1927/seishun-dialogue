@@ -22,33 +22,50 @@ time, mark, audio, video {
 
 @font-face {
     font-family: "Beautique Display";
-    src: url("../assets/BeautiqueDisplay-Regular.otf");
+    src: url("/assets/fonts/BeautiqueDisplay-Regular.otf");
     font-display: swap;
 }
 
 @font-face {
     font-family: "Noto Sans JP";
-    src: url("../assets/NotoSansJP-Regular.otf");
+    src: url("/assets/fonts/NotoSansJP-Regular.otf");
     font-display: swap;
 }
 
 @font-face {
     font-family: "Hasklug NFM";
-    src: url("../assets/Hasklug_NerdFont.otf");
+    src: url("/assets/fonts/Hasklug_NerdFont.otf");
     font-display: swap;
 }
 
-.serif { font-family: "Beautique Display", serif; }
-.sans-serif { font-family: "Noto Sans JP", sans-serif; }
-.monospace { font-family: "Hasklug NFM", monospace; }
+.serif {font-family: "Beautique Display", serif;}
+.sans-serif {font-family: "Noto Sans JP", sans-serif;}
+.monospace {font-family: "Hasklug NFM", monospace;}
 
 :root {
     --background: #111111;
     --foreground: #dddddd;
     --highlight: #acacac;
+    --disabled: #333333;
 }
 
 body {
     background-color: var(--background);
     color: var(--foreground);
+}
+
+.noDisplay {display: none;}
+
+.viewport {
+    height: 100vh;
+    width: 100vw;
+}
+
+.blackWhite {
+    color: var(--background);
+    background-color: var(--foreground);
+}
+.whiteBlack {
+    color: var(--foreground);
+    background-color: var(--background);
 }
