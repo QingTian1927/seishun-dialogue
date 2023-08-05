@@ -1,0 +1,47 @@
+.headingContainer, .cautiousContainer, .codeContainer, .loginBtnContainer
+{position: relative; width: 100vw;}
+
+.headingContainer, .cautionContainer, .codeContainer, .loginBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingContainer, .cautionContainer
+{height: 25vh;}
+.codeContainer {height: 25vh;}
+.loginBtnContainer {height: 25vh;}
+.headingContainer {font-size: 8vh;}
+
+.caution, .warning {
+    max-width: 70vw;
+    text-align: center;
+}
+.caution {font-size: 3.25vh;}
+.warning {font-size: 4.25vh;}
+
+.codeBackground {
+    box-sizing: border-box;
+    border-radius: 0.3em;
+    padding: 0.4em;
+
+    max-width: 80vw;
+
+    font-size: 8vh;
+    letter-spacing: 0.5ch;
+    text-align: center;
+}
+
+.loginBtn {
+    cursor: pointer;
+    border-style: none;
+
+    padding: 0.3em;
+    width: 4.5em;
+    border-radius: 0.4em;
+
+    font-size: 5vh;
+    text-align: center;
+}
+.loginBtn:hover
+{background-color: var(--highlight);}

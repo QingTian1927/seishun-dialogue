@@ -1,0 +1,100 @@
+.titleContainer, .infoContainer, .buttonsContainer
+{position: relative; width: 100vw;}
+.titleContainer {height: 50vh;}
+.infoContainer {height: 10vh;}
+.buttonsContainer {height: 20vh;}
+
+.titleCard {
+    position: absolute;
+    border-radius: 0.6em;
+    padding: 0.3em;
+    text-align: left;
+}
+
+.loginBtn, .signupBtn, .infoBtn {
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    border-style: none;
+}
+.loginBtn:hover, .signupBtn:hover, .infoBtn:hover
+{background-color: var(--highlight);}
+
+.infoBtn {
+    top: 1em; right: 1em;
+    width: 1.25em;
+    font-size: 3vh;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.loginBtn, .signupBtn {
+    right: 10%; padding: 0.2em;
+    border-radius: 0.5em;
+    text-align: left;
+}
+.loginBtn {bottom: 0.3em;}
+.signupBtn {top: 0.3em;}
+
+.dialogBtn {
+    margin: 0.5em; padding: 0.5em;
+    border-style: none; border-radius: 0.6em;
+    display: inline-block;
+    text-align: center;
+}
+.dialogBtn:hover {
+    color: var(--background);
+    background-color: var(--highlight);
+}
+
+.modal {
+    max-width: 80vw; text-align: center;
+    border-radius: 0.6em; border-width: 0.2em;
+}
+.modal::backdrop {background: rgba(17, 17, 17, 0.7);}
+
+.label {text-align: left;}
+
+.codeInput, .nameInput {
+    box-sizing: border-box;
+    max-width: 75vw;
+    margin: 0.3em auto;
+    text-align: left;
+}
+.codeInput, .nameInput:focus {outline: none;}
+
+.codeInput {padding: 0; border: none;}
+
+.nameInput {
+    padding: 0.3em; border-radius: 0.4em;
+    border: 0.2em solid var(--background);
+}
+
+@media screen and (orientation:landscape) {
+    .titleCard {left: 10%; top: 10%; font-size: 10vh;}
+    .loginBtn, .signupBtn {font-size: 4.5vh;}
+    .loginBtn {width: 15em;}
+    .signupBtn {width: 13em;}
+    .codeInput {font-size: 5.5vh;}
+    .nameInput {font-size: 3.75vh;}
+    .dialogBtn {font-size: 3vh;}
+    .modal {font-size: 4.25vh;}
+    .label {font-size: 3vh;}
+}
+
+@media screen and (orientation:portrait) {
+    .titleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleCard {font-size: 5.5vh;}
+    .loginBtn, .signupBtn {font-size: 3vh;}
+    .loginBtn {width: 10em;}
+    .signupBtn {width: 8em;}
+    .codeInput {font-size: 4.5vh;}
+    .nameInput {font-size: 3vh;}
+    .dialogBtn {font-size: 2.25vh;}
+    .modal {font-size: 3.5vh;}
+    .label {font-size: 2.25vh;}
+}

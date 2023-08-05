@@ -1,0 +1,6 @@
+.viewport {
+    position: relative; display: flex;
+    justify-content: center; align-items: center;
+}
+.title, .subtitle {position: absolute;}
+.title {top: 30%; font-size: 20vh;}

@@ -1,0 +1,34 @@
+<%- include("partials/head.ejs") %>
+    <link rel="stylesheet" href="/sheets/signup.css">
+    <script type="module" src="/scripts/signup.js" type="text/javascript" defer></script>
+    <noscript>Please enable JavaScript for basic functionalities</noscript>
+</head>
+
+<body>
+    <div class="headingContainer serif">
+        <h1>Sign Up Successful</h1>
+    </div>
+
+    <div class="cautionContainer sans-serif">
+        <p class="caution">
+            Below is your newly assigned login code.
+            Please carefully note it down before continuing any further.
+            Should you lose your login code, your account will be<br>
+            <strong class="warning"><em>PERMANENTLY INACCESSIBLE</em></strong>.
+        </p>
+    </div>
+
+    <div class="codeContainer monospace">
+        <div class="codeBackground blackWhite">
+            <div class="codeUnderline">
+                <p class="blackWhite"><%=code%></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="loginBtnContainer">
+        <button id="loginBtn" class="loginBtn blackWhite serif" type="button"
+            title="Log into your Seishun dashboard">Log In
+        </button>
+    </div>
+<%- include("partials/foot.ejs") %>
